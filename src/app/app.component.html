@@ -7,17 +7,28 @@
     Les Argonautes
   </h1>
 </header>
-
 <!-- Main section -->
 <main>
-
   <img src="/assets/img/grèce.jpg" class="main-background-img" alt="main-img-background">
-
   <section class="form-container">
     <form action="/action_page.php">
       <label for="name">Ajouter des Argonautes</label>
       <input type="text" id="fname" name="firstname" placeholder="Nom ...">
-      <input type="submit" value="Embarquer">
+      <input type="submit" class="submit-button" value="Embarquer">
     </form>
   </section>
 </main>
+<!-- Table section -->
+<section>
+  <h2>Les membres d'équipages</h2>
+  <table>
+    <tr>
+      <th>name</th>
+      <th>name</th>
+      <th>name</th>
+    </tr>
+    <tr>
+      <td *ngFor="">{{}}</td>
+    </tr>
+  </table>
+</section>

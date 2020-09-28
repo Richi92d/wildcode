@@ -31,12 +31,15 @@ main {
 @media only screen and (max-width: 600px) {
     .main-background-img {
         position: relative;
-        height: auto;
+        height: 15rem;
     }
     section.form-container {
         position: absolute;
         background-color: white;
-        top: 255px;
+        top: 260px;
+    }
+    main {
+        margin: 5px;
     }
 }
 
@@ -63,11 +66,31 @@ input {
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
-    cursor: pointer;
 }
 
-input:hover {
+.submit-button:hover {
     background-color: #F08080;
     border: 5px black;
     color: white;
+    cursor: pointer;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 5px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+h2 {
+    text-align: center;
 }
