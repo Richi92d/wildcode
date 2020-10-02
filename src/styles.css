@@ -2,10 +2,17 @@
 html {
     width: 80%;
     margin: auto;
+    height: 100%;
+}
+
+body {
+    height: 100%;
 }
 
 @media only screen and (max-width: 600px) {
     html {
         width: auto;
+        margin: auto;
+        height: 100%;
     }
 }

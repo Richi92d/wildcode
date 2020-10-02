@@ -7,27 +7,38 @@
     Les Argonautes
   </h1>
 </header>
-<!-- Main section -->
-<main>
-  <section class="form-container">
-    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <label>Ajouter des Argonautes</label>
-        <input type="text" id="input-name" name="name" placeholder="Nom ..." formControlName="name">
-      </div>
+<div class="card">
+  <div class="thumbnail">
+    <img class="left" src="https://www.contrepoints.org/wp-content/uploads/2017/01/14373015335_22322e4377_z.jpg" />
+  </div>
+  <div class="right">
+    <h2 class="center">un peu d'histoire Argonaute</h2>
+    <div class="separator"></div>
+    <p>
+      Quelque part, au beau milieu des cyclades, à 500 kilomètres de Iolcos...
+      Tranquillement installé sur un transat au bord de la piscine de votre villa, vous vous relaxez en regardant la
+      mer…. Mais votre tranquillité est soudainement perturbée par la sonnerie agressive de votre téléphone. C’est votre
+      big boss Jason. Il veut vous voir tout de suite pour constituer la liste définitive des Argonautes avec lui.
+      Mince, vous avez oublié de le prévenir de votre départ pour les îles ! Pas question d’envoyer un papyrus par
+      coursier, cela prendrait des semaines. Pas de panique, vous allez réaliser une application web dynamique
+      comprenant un formulaire de saisie où vous et Jason ajouterez en temps réel la liste des candidats. Un peu
+      d’acronyme CRUD, le tout enrobé dans un joli CSS, et le tour est joué.
+      Qui aurait cru que la technologie était aussi avancée en Grèce antique ?
+    </p>
+  </div>
+  <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <h3>Ajouter un Argonaute</h3>=>
+      <input type="text" id="input-name" name="name" placeholder="Nom ..." formControlName="name">
       <input type="submit" class="submit-button" value="Embarquer">
-    </form>
-  </section>
-  <section>
-    <h2>Les membres d'équipages</h2>
+    </div>
+  </form>
+  <section class="column">
+    <h3 class="center">Les membres d'équipages</h3>
     <div>
-      <div class="three-column" *ngFor="let mydata of array[0]">
-        {{mydata.name}}
+      <div class="three-column" *ngFor="let myData of array[0]">
+        {{myData.name | lowercase}} <hr>
       </div>
     </div>
   </section>
-</main>
-<!---footer section-->
-<footer>
-  <p>Réalisé par Jason en Anthestérion de l'an 515 avant JC</p>
-</footer>
+</div>

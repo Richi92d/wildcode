@@ -27,10 +27,11 @@ export class AppComponent implements OnInit {
     let myFormData = new FormData();
     myFormData.append('name', this.reactiveForm.value.name);
 
-    return this.httpClient.post(this.postUrl, myFormData).subscribe(
-      () => this.getMethod(),
-      (error) => console.log(error)
-    );
+    return this.httpClient.post(this.postUrl, myFormData,
+      { responseType: 'text' }).subscribe(
+        (response) => this.array.push(response),
+        (error) => console.log(error)
+      );
   }
 
   getMethod() {
