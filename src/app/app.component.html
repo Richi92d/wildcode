@@ -29,7 +29,7 @@
   <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <h3>Ajouter un Argonaute</h3>=>
-      <input type="text" id="input-name" name="name" placeholder="Nom ..." formControlName="name">
+      <input type="text" id="input-name" name="name" placeholder="Nom ..." formControlName="name" />
       <input type="submit" class="submit-button" value="Embarquer">
     </div>
   </form>
@@ -37,7 +37,8 @@
     <h3 class="center">Les membres d'équipages</h3>
     <div>
       <div class="three-column" *ngFor="let myData of array[0]">
-        {{myData.name | lowercase}} <hr>
+        {{myData.name | lowercase}}
+        <hr>
       </div>
     </div>
   </section>

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -12,9 +12,8 @@ export class AppComponent implements OnInit {
   postUrl: string = 'http://localhost/post.php';
 
   array = [];
-
   reactiveForm = new FormGroup({
-    name: new FormControl(),
+    name: new FormControl()
   });
 
   constructor(private httpClient: HttpClient, private formBuilder: FormBuilder) { }
@@ -42,5 +41,6 @@ export class AppComponent implements OnInit {
 
   onSubmit() {
     this.postMethod();
+    alert('Bienvenue à bord' + this.reactiveForm.value.name);
   };
 }
